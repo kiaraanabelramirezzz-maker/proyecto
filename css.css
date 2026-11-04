@@ -277,7 +277,7 @@ body {
 .modal-close {
     display: block;
     margin-top: 1rem;
-    background-color: var(--color-primario);
+    background-color: #C0392B;
     color: white;
     padding: 0.5rem 1.2rem;
     text-decoration: none;
@@ -290,5 +290,5 @@ body {
 }
 
 .modal-close:hover {
-    background-color: var(--color-secundario);
+    background-color: #A93226;
 }
