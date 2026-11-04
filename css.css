@@ -1,18 +1,21 @@
 /* ========================================== */
-/* 1. CONFIGURACIÓN INICIAL Y VARIABLES (:root) */
+/* 1. CONFIGURACIÓN Y VARIABLES (:root)       */
 /* ========================================== */
 :root {
-    --color-primario: #1F5A33;      /* Verde corporativo principal */
-    --color-secundario: #5FA777;    /* Verde medio de realce */
-    --color-claro: #E2F1E6;         /* Fondo suave */
-    --color-texto: #1F2D24;         /* Texto oscuro legible */
-    --color-fondo: #F4FAF6;         /* Fondo general de la página */
+    --color-primario: #1F5A33;      
+    --color-secundario: #5FA777;    
+    --color-claro: #E2F1E6;         
+    --color-texto: #1F2D24;         
+    --color-fondo: #F4FAF6;         
     --radio-borde: 10px;
 }
 
-/* Reset universal del modelo de cajas (box-sizing) */
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Modelo de cajas moderno (Apuntes sección 7) */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces internos */
 }
 
 body {
@@ -24,7 +27,7 @@ body {
 }
 
 /* ========================================== */
-/* 2. ESTILOS DE LA CABECERA (Flexbox)        */
+/* 2. CABECERA Y NAVEGACIÓN MULTI-ENLACE        */
 /* ========================================== */
 .site-header {
     display: flex;
@@ -35,38 +38,43 @@ body {
     color: white;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .site-header .logo {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .nav-menu {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s; /* Transiciones suaves (Apuntes sección 9) */
 }
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-    color: var(--color-claro);
-    text-decoration: underline;
+    background-color: var(--color-secundario);
+    color: white;
 }
 
 /* ========================================== */
-/* 3. MAQUETACIÓN PRINCIPAL Y SECCIONES (Grid)  */
+/* 3. MAQUETACIÓN PRINCIPAL (Grid)            */
 /* ========================================== */
 .site-main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 2.5rem auto;
     padding: 0 1rem;
     display: grid;
     gap: 3rem;
@@ -74,16 +82,16 @@ body {
 
 .content-section {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: var(--radio-borde);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     border-top: 5px solid var(--color-secundario);
 }
 
 .content-section h2 {
     color: var(--color-primario);
     margin-top: 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
     border-bottom: 2px solid var(--color-claro);
     padding-bottom: 0.5rem;
 }
@@ -95,25 +103,55 @@ body {
 }
 
 /* ========================================== */
-/* 4. TARJETAS DE CONTENIDO (Grid adaptable)  */
+/* 4. SUB-MENÚS Y BOTONES DE OPCIONES         */
+/* ========================================== */
+.sub-nav-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-sub {
+    background-color: var(--color-claro);
+    color: var(--color-primario);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid var(--color-secundario);
+    transition: all 0.2s ease;
+}
+
+.btn-sub:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* ========================================== */
+/* 5. TARJETAS INTERACTIVAS (Grid adaptativa) */
 /* ========================================== */
 .cards-grid {
     display: grid;
-    /* Rejilla automática basada en los apuntes: se adapta sin romper */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Rejilla automática (Apuntes sección 8) */
     gap: 1.5rem;
 }
 
 .card {
-    background: var(--color-claro);
+    background: #fafdfb;
     padding: 1.5rem;
     border-radius: var(--radio-borde);
     border: 1px solid #B3D9BF;
-    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(31, 90, 51, 0.15);
 }
 
 .card h3 {
@@ -121,19 +159,48 @@ body {
     margin-top: 0;
 }
 
+/* Enlaces internos dentro de las tarjetas */
+.card-link {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: var(--color-secundario);
+    text-decoration: underline;
+}
+
 /* ========================================== */
-/* 5. PIE DE PÁGINA                           */
+/* 6. PIE DE PÁGINA                           */
 /* ========================================== */
 .site-footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: var(--color-primario);
     color: white;
     margin-top: 3rem;
 }
 
+.footer-links {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--color-claro);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 /* ========================================== */
-/* 6. DISEÑO ADAPTABLE (Media Queries)        */
+/* 7. DISEÑO ADAPTABLE (Media Queries)        */
 /* ========================================== */
 @media (max-width: 768px) {
     .site-header {
@@ -143,12 +210,16 @@ body {
     }
     
     .nav-menu {
-        flex-direction: column;
-        gap: 0.5rem;
+        justify-content: center;
+        gap: 0.8rem;
     }
 
     .site-main {
         margin: 1rem;
         padding: 0;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
     }
 }
