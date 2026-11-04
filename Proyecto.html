@@ -1,21 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Intermodular</title>
-
-    <link rel="stylesheet" href="css.css">
+    <title>Página Principal - DAM</title>
+    <!-- Vínculo con la hoja de estilos externa -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
-    <header>
-        <h1>Información de PI</h1>
-        <h2>hola</h2>
-    </header>
-    
-    
 
+    <!-- ========================================== -->
+    <!-- ZONA DE CABECERA Y NAVEGACIÓN              -->
+    <!-- ========================================== -->
+    <header class="site-header">
+        <div class="logo">Mi Web DAM</div>
+        <nav class="nav-menu">
+            <a href="#proyecto-intermodular">Proyecto Intermodular</a>
+            <a href="#entornos-desarrollo">Entornos de Desarrollo</a>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- ZONA PRINCIPAL DE CONTENIDO                -->
+    <!-- ========================================== -->
+    <main class="site-main">
+        
+        <!-- SECCIÓN 1: PROYECTO INTERMODULAR -->
+        <section id="proyecto-intermodular" class="content-section">
+            <h2>Proyecto Intermodular</h2>
+            <p class="section-intro">Información general y descripción del proyecto intermodular.</p>
+            
+            <div class="cards-grid">
+                <!-- COMENTARIO: Inserta aquí tarjetas o subapartados del Proyecto Intermodular -->
+                <article class="card">
+                    <h3>Fase 1: Análisis y Diseño</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Descripción de la fase de análisis. --></p>
+                </article>
+                <article class="card">
+                    <h3>Fase 2: Desarrollo</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Descripción de la fase de desarrollo. --></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ENTORNOS DE DESARROLLO -->
+        <section id="entornos-desarrollo" class="content-section">
+            <h2>Entornos de Desarrollo</h2>
+            <p class="section-intro">Herramientas, control de versiones y pruebas de software.</p>
+            
+            <div class="cards-grid">
+                <!-- COMENTARIO: Inserta aquí tarjetas o subapartados de Entornos de Desarrollo -->
+                <article class="card">
+                    <h3>Control de Versiones (Git)</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Apuntes sobre Git y GitHub. --></p>
+                </article>
+                <article class="card">
+                    <h3>Pruebas y Depuración</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Información sobre testing y depuración de código. --></p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- ZONA DE PIE DE PÁGINA                      -->
+    <!-- ========================================== -->
+    <footer class="site-footer">
+        <p>&copy; 2026 - Desarrollo de Aplicaciones Multiplatorma (DAM)</p>
+    </footer>
 
 </body>
 </html>
