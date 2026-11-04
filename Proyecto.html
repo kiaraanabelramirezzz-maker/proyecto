@@ -3,43 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal - DAM</title>
+    <title>Portal DAM - Proyecto y Entornos</title>
     <!-- Vínculo con la hoja de estilos externa -->
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="proyecto intermodular.css">
 </head>
 <body>
 
     <!-- ========================================== -->
-    <!-- ZONA DE CABECERA Y NAVEGACIÓN              -->
+    <!-- CABECERA Y MENÚ DE NAVEGACIÓN MULTI-ENLACE   -->
     <!-- ========================================== -->
     <header class="site-header">
-        <div class="logo">Mi Web DAM</div>
+        <div class="logo">Portal DAM</div>
         <nav class="nav-menu">
+            <a href="#inicio">Inicio</a>
             <a href="#proyecto-intermodular">Proyecto Intermodular</a>
             <a href="#entornos-desarrollo">Entornos de Desarrollo</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <!-- ========================================== -->
     <!-- ZONA PRINCIPAL DE CONTENIDO                -->
     <!-- ========================================== -->
-    <main class="site-main">
+    <main class="site-main" id="inicio">
         
         <!-- SECCIÓN 1: PROYECTO INTERMODULAR -->
         <section id="proyecto-intermodular" class="content-section">
             <h2>Proyecto Intermodular</h2>
-            <p class="section-intro">Información general y descripción del proyecto intermodular.</p>
+            <p class="section-intro">Espacio dedicado a la planificación, diseño y desarrollo del proyecto integrado del ciclo.</p>
             
+            <!-- Sub-opciones y enlaces internos clickables -->
+            <div class="sub-nav-links">
+                <a href="#fase-analisis" class="btn-sub">Fase de Análisis</a>
+                <a href="#fase-desarrollo" class="btn-sub">Fase de Desarrollo</a>
+                <a href="#fase-defensa" class="btn-sub">Defensa y Entrega</a>
+            </div>
+
             <div class="cards-grid">
-                <!-- COMENTARIO: Inserta aquí tarjetas o subapartados del Proyecto Intermodular -->
-                <article class="card">
-                    <h3>Fase 1: Clasificación de las empresas</h3>
-                    <p><img src="foto1.png"></p>
-                    <p><!-- METER INFORMACIÓN AQUÍ: Descripción de la fase de análisis. --></p>
+                <!-- Tarjeta 1 -->
+                <article class="card" id="fase-analisis">
+                    <h3>Análisis y Requisitos</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Descripción de objetivos, diagramas y alcance del proyecto. --></p>
+                    <a href="#" class="card-link">Leer documentación &rarr;</a>
                 </article>
-                <article class="card">
-                    <h3>Fase 2: Desarrollo</h3>
-                    <p><!-- METER INFORMACIÓN AQUÍ: Descripción de la fase de desarrollo. --></p>
+                
+                <!-- Tarjeta 2 -->
+                <article class="card" id="fase-desarrollo">
+                    <h3>Implementación</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Tecnologías empleadas, arquitectura y código fuente. --></p>
+                    <a href="#" class="card-link">Ver repositorio &rarr;</a>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card" id="fase-defensa">
+                    <h3>Presentación Final</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Diapositivas, fechas de exposición y rúbricas. --></p>
+                    <a href="#" class="card-link">Descargar materiales &rarr;</a>
                 </article>
             </div>
         </section>
@@ -47,17 +67,35 @@
         <!-- SECCIÓN 2: ENTORNOS DE DESARROLLO -->
         <section id="entornos-desarrollo" class="content-section">
             <h2>Entornos de Desarrollo</h2>
-            <p class="section-intro">Herramientas, control de versiones y pruebas de software.</p>
+            <p class="section-intro">Herramientas de optimización, control de versiones, refactorización y pruebas de software.</p>
             
+            <!-- Sub-opciones y enlaces internos clickables -->
+            <div class="sub-nav-links">
+                <a href="#git-seccion" class="btn-sub">Control de Versiones</a>
+                <a href="#testing-seccion" class="btn-sub">Pruebas (Testing)</a>
+                <a href="#refactor-seccion" class="btn-sub">Refactorización</a>
+            </div>
+
             <div class="cards-grid">
-                <!-- COMENTARIO: Inserta aquí tarjetas o subapartados de Entornos de Desarrollo -->
-                <article class="card">
-                    <h3>Control de Versiones (Git)</h3>
-                    <p><!-- METER INFORMACIÓN AQUÍ: Apuntes sobre Git y GitHub. --></p>
+                <!-- Tarjeta 1 -->
+                <article class="card" id="git-seccion">
+                    <h3>Git y GitHub</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Flujo de trabajo con ramas, commits y Pull Requests. --></p>
+                    <a href="#" class="card-link">Ver tutoriales &rarr;</a>
                 </article>
-                <article class="card">
-                    <h3>Pruebas y Depuración</h3>
-                    <p><!-- METER INFORMACIÓN AQUÍ: Información sobre testing y depuración de código. --></p>
+
+                <!-- Tarjeta 2 -->
+                <article class="card" id="testing-seccion">
+                    <h3>Pruebas Unitarias</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: JUnit, pruebas de caja blanca y caja negra. --></p>
+                    <a href="#" class="card-link">Ver ejemplos &rarr;</a>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card" id="refactor-seccion">
+                    <h3>Depuración y Debugging</h3>
+                    <p><!-- METER INFORMACIÓN AQUÍ: Uso de breakpoints y herramientas de depuración en el IDE. --></p>
+                    <a href="#" class="card-link">Saber más &rarr;</a>
                 </article>
             </div>
         </section>
@@ -65,10 +103,15 @@
     </main>
 
     <!-- ========================================== -->
-    <!-- ZONA DE PIE DE PÁGINA                      -->
+    <!-- PIE DE PÁGINA CON ENLACES EXTRA            -->
     <!-- ========================================== -->
-    <footer class="site-footer">
-        <p>&copy; 2026 - Desarrollo de Aplicaciones Multiplatorma (DAM)</p>
+    <footer class="site-footer" id="contacto">
+        <div class="footer-links">
+            <a href="#inicio">Volver arriba</a> | 
+            <a href="#">Aviso Legal</a> | 
+            <a href="#">Política de Privacidad</a>
+        </div>
+        <p>&copy; 2026 - Ciclo Formativo DAM</p>
     </footer>
 
 </body>
