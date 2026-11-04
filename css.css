@@ -147,6 +147,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+
 }
 
 .card:hover {
