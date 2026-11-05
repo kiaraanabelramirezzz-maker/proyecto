@@ -295,3 +295,52 @@ body {
     background-color: #A93226;
 
 }
+body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .pregunta {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        /* Ocultamos los radio buttons originales */
+        .opcion-input {
+            display: none;
+        }
+        /* Estilo base para las opciones de respuesta */
+        .opcion-label {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background: #eef2f7;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+      
+        
+
+        /* Cambia color si mala o buena*/
+
+       
+        .opcion-input.correcta:checked + .opcion-label {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+      
+        .opcion-input.incorrecta:checked + .opcion-label {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
