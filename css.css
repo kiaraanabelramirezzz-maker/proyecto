@@ -224,6 +224,8 @@ body {
     .content-section {
         padding: 1.5rem;
     }
+
+
 }
 
 /* ========================================== */
@@ -291,4 +293,5 @@ body {
 
 .modal-close:hover {
     background-color: #A93226;
+
 }
