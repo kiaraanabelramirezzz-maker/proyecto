@@ -172,6 +172,7 @@ body {
     display: inline-block;
     transition: color 0.2s;
     text-align: center;
+    
 }
 
 .card-link:hover {
