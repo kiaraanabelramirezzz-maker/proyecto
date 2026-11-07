@@ -306,3 +306,15 @@ body {
   font-weight: 800;
   color: #38bdf8;
 }
+
+.logo {
+    display: flex;
+    align-items: center; /* Centra ambos elementos verticalmente */
+    gap: 10px;           /* Espacio entre el texto y la imagen */
+}
+
+/* Estilo opcional para controlar el tamaño de la imagen */
+.logo-png {
+    height: 80px;        /* Cambia esto según el tamaño que prefieras */
+    width: auto;         /* Mantiene la proporción de la imagen .png */
+}
