@@ -166,12 +166,13 @@ body {
 .card-link {
     color: var(--color-primario);
     text-decoration: none;
-    font-family: Italic;
+    font-family: Share Tech Mono, monospace;
     font-size: 2rem;
     margin-top: 1rem;
     display: inline-block;
     transition: color 0.2s;
     text-align: center;
+    
     
 }
 
