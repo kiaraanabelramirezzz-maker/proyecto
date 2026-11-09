@@ -321,20 +321,3 @@ body {
     width: auto;         /* Mantiene la proporción de la imagen .png */
 }
 
-.contenedor-scroll {
-    width: 80%;               /* Ancho del contenedor (ajústalo a tus necesidades, ej: 800px o 80%) */
-    max-width: 1500px;        /* Ancho máximo opcional */
-    height: 600px;            /* Altura fija de la ventana. Si el contenido supera esto, aparecerá el scroll */
-    margin: 20px auto;        /* Centra el contenedor horizontalmente y añade separación */
-    padding: 20px;            /* Espacio interior para que el texto no pegue con los bordes */
-    background-color: #ffffff; /* Color de fondo de la ventana (blanco en este ejemplo) */
-    border: 2px solid #ccc;   /* Borde gris alrededor del cuadro (opcional) */
-    border-radius: 8px;       /* Bordes redondeados (opcional) */
-    overflow-y: auto;         /* ¡Clave! Activa la barra de desplazamiento vertical solo cuando sea necesario */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle relieve */
-
-    /* Propiedades clave para evitar el scroll horizontal por palabras largas o imágenes */
-    overflow-x: hidden;       
-    overflow-wrap: break-word; 
-    word-break: break-word;
-}
