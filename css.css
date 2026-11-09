@@ -332,4 +332,9 @@ body {
     border-radius: 8px;       /* Bordes redondeados (opcional) */
     overflow-y: auto;         /* ¡Clave! Activa la barra de desplazamiento vertical solo cuando sea necesario */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle relieve */
+
+    /* Propiedades clave para evitar el scroll horizontal por palabras largas o imágenes */
+    overflow-x: hidden;       
+    overflow-wrap: break-word; 
+    word-break: break-word;
 }
