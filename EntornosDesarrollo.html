@@ -496,10 +496,62 @@
         <p>Dadas las desventajas de este modelo, se desarrollaron con posterioridad otros modelos que se exponen a continuación.</p><br>
         <p><b>1.8.2 Modelos de Proceso Incremental</b></p>
         <p>Uno de los inconvenientes más importantes del modelo en cascada es que el cliente no dispone de una versión funcional del sistema hasta muy tarde. En este modelo, el desarrollo se concibe como un proceso en el que se van produciendo diversos incrementos o entregables con funcionalidad parcial que se van ampliando en entregas posteriores. De esta manera, se concibe el desarrollo de software como un proceso en el que se van produciendo diversos incrementos o entregables y, en cada uno de ellos, se aplican los pasos del ciclo de vida clásico (como análisis, diseño, programación, pruebas y mantenimiento).</p>
-        <center><img src="modelo2.jpg" alt="Modelo en Cascada" width="600" height="275"></center>
+        <center><img src="modelo2.jpg" alt="Modelo en Cascada" width="600" height="450"></center>
+        <p>El desarrollo avanza en un flujo rectilíneo descendente a través de cinco actividades principales:</p>
+        <ul>
+            <li>Reduce los riesgos de retrasos, de cambios de requisitos y los problemas de aceptación.</li>
+            <li>Los entregables intermedios facilitan la retroalimentación por parte de los clientes, lo que ayuda a evitar problemas mayores en las siguientes entregas.</li>
+            <li>Permiten al usuario validar el sistema a medida que se va construyendo.</li>
+        </ul>
+        <p>Resulta recomendable emplear este modelo de ciclo de vida cuando no están bien definidos los requisitos y es muy probable que se produzcan cambios</p>
+         <p><b>1.8.1 Modelos de proceso evolutivo</b></p>
+        <p>En este modelo, el desarrollo se concibe como un proceso en el que se van produciendo diversos incrementos o entregables con funcionalidad parcial que se van ampliando en entregas posteriores. De esta manera, se concibe el desarrollo de software como un proceso en el que se van produciendo diversos incrementos o entregables y, en cada uno de ellos, se aplican los pasos del ciclo de vida clásico (como análisis, diseño, programación, pruebas y mantenimiento).</p>
+        <p>Tienen su origen en el hecho de que el software, como cualquier sistema complejo, evoluciona con el tiempo. Es frecuente que los requerimientos del negocio y del producto cambien conforme avanza el desarrollo, por lo que no resulta realista trazar una trayectoria rectilínea o fija hacia el producto final. Generalmente se comprende bien el conjunto de requerimientos iniciales o el producto básico, pero los detalles o las extensiones del sistema aún están por definirse.
+            Estos modelos son iterativos y se caracterizan por el desarrollo de versiones del software cada vez más completas. Se presentan a continuación dos modelos de proceso evolutivo:</p>
+        <p><b>Construcción de prototipos:</b></p>
+        <p>Un prototipo se puede definir como un sistema auxiliar que permite probar experimentalmente ciertas soluciones parciales a las necesidades del usuario o a los requisitos del sistema. Puede tratarse de un modelo que describa la interacción hombre-máquina para facilitar su comprensión, o de un programa que implemente subconjuntos de la funcionalidad de la aplicación.
+        Es recomendable seguir este modelo de ciclo de vida cuando el cliente puede definir los objetivos generales del software pero no es capaz de identificar los requerimientos en detalle, o cuando el equipo de desarrollo tiene dudas considerables sobre aspectos importantes como la eficiencia, el sistema operativo o la forma en que se llevará a cabo la interacción. El propósito principal de desarrollar el prototipo es lograr que las y los desarrolladores sepan con exactitud lo que tiene que hacer la aplicación.</p>
+        <center><img src="modelo3.jpg" alt="Modelo en Cascada" width="600" height="450"></center>
+         <ol>
+        <li><b>Comunicación: </b>Se inicia con la comunicación con el cliente para definir los objetivos generales y las áreas que requieren mayor definición.</li>
+        <li><b>Planificación y Modelado: </b>Se planifica la iteración y se realiza el modelado (diseño rápido).</li>
+        <li><b>Construcción y Evaluación: </b>Se construye el prototipo y se somete a la evaluación de los participantes, quienes proporcionan retroalimentación a los desarrolladores.</li>
+    </ol>
 
+    <p><b>Proceso iterativo:</b> La iteración ocurre a medida que el prototipo se refina para satisfacer las necesidades de los usuarios y permitir a los desarrolladores entender mejor lo que se necesita construir, dando lugar a versiones cada vez más completas.</p>
 
+    <p><b>Modelo en espiral:</b></p>
 
+    <p>Este modelo evolutivo fue diseñado para cubrir las mejores características tanto del modelo en cascada como del modelo de construcción de prototipos, añadiendo un nuevo elemento, que es el análisis de riesgo, dentro de la actividad estructural de planificación. El software se desarrolla mediante una serie de entregas representadas como iteraciones o vueltas alrededor de una espiral.</p>
+
+    <center><img src="modelo4.jpg" alt="Modelo en espiral" width="600" height="450"></center>
+
+    <ul>
+        <li>Durante las <b>primeras iteraciones</b>, lo que se entrega puede ser un modelo o un prototipo.</li>
+        <li>En las <b>iteraciones posteriores</b>, se van produciendo versiones del software cada vez más completas.</li>
+    </ul>
+
+    <p>Alrededor de la espiral se llevan a cabo cuatro tareas principales en cada ciclo:</p>
+
+    <ul>
+        <li><b>Planificación: </b>Se identifican los objetivos que se desean conseguir en la iteración, las alternativas para alcanzarlos y las restricciones de plazos, costes, etc.</li>
+        <li><b>Análisis de riesgo: </b>Se evalúan las diferentes alternativas para la parte de desarrollo elegida, seleccionando la más ventajosa y tomando precauciones para evitar los riesgos previstos.</li>
+        <li><b>Ingeniería: </b>Se desarrolla el producto (lo que incluye análisis, diseño, programación, etc.) con el objetivo de obtener una versión más completa del sistema.</li>
+        <li><b>Evaluación: </b>El cliente evalúa el resultado del trabajo de ingeniería y se decide si se continúa para planificar la siguiente iteración.</li>
+    </ul>
+
+    <p><b>Ventajas principales:</b></p>
+
+    <ul>
+        <li>Permite que tanto quienes encargan el software como quienes lo desarrollan sean conscientes de los problemas o riesgos en diferentes momentos, facilitando la reacción en caso de que ocurran.</li>
+        <li>Si existe inseguridad en cuanto a los requisitos, se puede aplicar de forma complementaria el enfoque de construcción de prototipos para eliminar dichos riesgos.</li>
+    </ul>
+
+    <p>El principal inconveniente de este modelo es, como indica Pressman (2010), que requiere mucha experiencia en la evaluación del riesgo y se basa en ella para llegar al éxito. No hay duda de que habrá problemas si algún riesgo importante no se descubre y administra.</p>
+
+</section>
+    
+    
     </section>
 
             
